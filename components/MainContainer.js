@@ -1,24 +1,16 @@
 import Head from 'next/head';
-import A from '../components/A';
+import Header from './Header';
 
 const MainContainer = ({ children, keywords }) => {
   return (
     <>
       <Head>
-        <meta keywords={'i love dogs, next.js' + keywords}></meta>
-        <title>Главная страница</title>
+        <meta keywords={'next.js' + keywords}></meta>
+        <title>Next.js App</title>
       </Head>
-      <nav className='navbar'>
-        <A href={'/'} text='Главная'></A>
-        <A href={'/users'} text='Пользователи'></A>
-      </nav>
+
+      <Header />
       <div>{children}</div>
-      <style jsx>{`
-        .navbar {
-          background: #252526;
-          padding: 15px;
-        }
-      `}</style>
     </>
   );
 };

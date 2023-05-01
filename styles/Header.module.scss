@@ -1,0 +1,18 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 99;
+
+  .logo {
+    font-size: 2em;
+    font-weight: bold;
+    color: var(--main-color);
+    user-select: none;
+  }
+}

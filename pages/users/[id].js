@@ -8,8 +8,8 @@ export default function User({ user }) {
   return (
     <MainContainer keywords={user.name}>
       <div className={styles.user}>
-        <h1>Пользователь с id {query.id}</h1>
-        <div>Имя пользователя - {user.name}</div>
+        <h1>User id is {query.id}</h1>
+        <div>User name is {user.name}</div>
       </div>
     </MainContainer>
   );

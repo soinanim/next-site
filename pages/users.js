@@ -2,19 +2,23 @@ import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import MainContainer from '../components/MainContainer';
 
+import styles from '../styles/users.module.scss';
+
 const Users = ({ users }) => {
   return (
     <MainContainer keywords={'users'}>
-      <h1>Список пользователей</h1>
-      <ul>
-        {users.map((user) => (
-          <li key={user.id}>
-            <Link href={`/users/${user.id}`} legacyBehavior>
-              <a>{user.name}</a>
-            </Link>
-          </li>
-        ))}
-      </ul>
+      <h1 className={styles.heading}>Users List</h1>
+      <div className={styles.wrapper}>
+        <ul className={styles.users}>
+          {users.map((user) => (
+            <li key={user.id}>
+              <Link href={`/users/${user.id}`} legacyBehavior>
+                <a>{user.name}</a>
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
     </MainContainer>
   );
 };
